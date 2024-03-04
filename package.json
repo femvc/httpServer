@@ -1,11 +1,11 @@
 {
-  "name": "http-server",
+  "name": "httpserver3",
   "version": "14.2.1",
   "description": "A simple zero-configuration command-line http server",
-  "main": "./lib/http-server",
+  "main": "./lib/httpserver3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/http-party/http-server.git"
+    "url": "git://github.com/femvc/httpserver3.git"
   },
   "keywords": [
     "cli",
@@ -13,12 +13,12 @@
     "static",
     "http",
     "https",
-    "http-server",
+    "httpserver3",
     "https-server",
     "server"
   ],
   "scripts": {
-    "start": "node ./bin/http-server",
+    "start": "node ./bin/httpserver3",
     "test": "tap --reporter=spec test/*.test.js",
     "test-watch": "tap --reporter=spec --watch test/*.test.js"
   },
@@ -27,7 +27,7 @@
     "bin",
     "doc"
   ],
-  "man": "./doc/http-server.1",
+  "man": "./doc/httpserver3.1",
   "engines": {
     "node": ">=12.16"
   },
@@ -108,11 +108,11 @@
     "tap": "^14.11.0"
   },
   "bugs": {
-    "url": "https://github.com/http-party/http-server/issues"
+    "url": "https://github.com/femvc/httpserver3/issues"
   },
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "http-server": "./bin/http-server"
+    "httpserver3": "./bin/httpserver3"
   }
 }

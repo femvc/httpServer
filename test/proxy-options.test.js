@@ -2,7 +2,7 @@ const test = require('tap').test
 const path = require('path')
 const fs = require('fs')
 const request = require('request')
-const httpServer = require('../lib/http-server')
+const httpServer = require('../lib/httpserver3')
 const promisify = require('util').promisify
 
 const requestAsync = promisify(request)

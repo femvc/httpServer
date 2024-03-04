@@ -4,7 +4,7 @@
 
 var chalk     = require('chalk'),
     os         = require('os'),
-    httpServer = require('../lib/http-server'),
+    httpServer = require('../lib/httpserver3'),
     portfinder = require('portfinder'),
     opener     = require('opener'),
 
@@ -17,11 +17,11 @@ var argv = require('minimist')(process.argv.slice(2), {
 });
 var ifaces = os.networkInterfaces();
 
-process.title = 'http-server';
+process.title = 'httpserver3';
 
 if (argv.h || argv.help) {
   console.log([
-    'usage: http-server [path] [options]',
+    'usage: httpserver3 [path] [options]',
     '',
     'options:',
     '  -p --port    Port to use. If 0, look for open port. [8080]',
@@ -200,15 +200,15 @@ function listen(port) {
     var protocol = tls ? 'https://' : 'http://';
 
     logger.info([
-      chalk.yellow('Starting up http-server, serving '),
+      chalk.yellow('Starting up httpserver3, serving '),
       chalk.cyan(server.root),
       tls ? (chalk.yellow(' through') + chalk.cyan(' https')) : ''
     ].join(''));
 
-    logger.info([chalk.yellow('\nhttp-server version: '), chalk.cyan(require('../package.json').version)].join(''));
+    logger.info([chalk.yellow('\nhttpserver3 version: '), chalk.cyan(require('../package.json').version)].join(''));
 
     logger.info([
-      chalk.yellow('\nhttp-server settings: '),
+      chalk.yellow('\nhttpserver3 settings: '),
       ([chalk.yellow('CORS: '), argv.cors ? chalk.cyan(argv.cors) : chalk.red('disabled')].join('')),
       ([chalk.yellow('Cache: '), argv.c ? (argv.c === '-1' ? chalk.red('disabled') : chalk.cyan(argv.c + ' seconds')) : chalk.cyan('3600 seconds')].join('')),
       ([chalk.yellow('Connection Timeout: '), argv.t === '0' ? chalk.red('disabled') : (argv.t ? chalk.cyan(argv.t + ' seconds') : chalk.cyan('120 seconds'))].join('')),
@@ -268,11 +268,11 @@ if (process.platform === 'win32') {
 }
 
 process.on('SIGINT', function () {
-  logger.info(chalk.red('http-server stopped.'));
+  logger.info(chalk.red('httpserver3 stopped.'));
   process.exit();
 });
 
 process.on('SIGTERM', function () {
-  logger.info(chalk.red('http-server stopped.'));
+  logger.info(chalk.red('httpserver3 stopped.'));
   process.exit();
 });

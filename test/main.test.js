@@ -2,7 +2,7 @@ const test = require('tap').test;
 const path = require('path');
 const fs = require('fs');
 const request = require('request');
-const httpServer = require('../lib/http-server');
+const httpServer = require('../lib/httpserver3');
 const promisify = require('util').promisify;
 
 const requestAsync = promisify(request);
@@ -16,7 +16,7 @@ const root = path.join(__dirname, 'fixtures', 'root');
 // Tests are grouped into those which can run together. The groups are given
 // their own port to run on and live inside a Promise. Tests are done when all
 // Promise test groups complete.
-test('http-server main', (t) => {
+test('httpserver3 main', (t) => {
   Promise.all([
     new Promise((resolve) => {
       const server = httpServer.createServer({

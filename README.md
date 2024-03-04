@@ -1,12 +1,12 @@
-[![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/http-party/http-server/Node.js%20CI/master?style=flat-square)](https://github.com/http-party/http-server/actions)
-[![npm](https://img.shields.io/npm/v/http-server.svg?style=flat-square)](https://www.npmjs.com/package/http-server) [![homebrew](https://img.shields.io/homebrew/v/http-server?style=flat-square)](https://formulae.brew.sh/formula/http-server) [![npm downloads](https://img.shields.io/npm/dm/http-server?color=blue&label=npm%20downloads&style=flat-square)](https://www.npmjs.com/package/http-server)
-[![license](https://img.shields.io/github/license/http-party/http-server.svg?style=flat-square)](https://github.com/http-party/http-server)
+[![GitHub Workflow Status (master)](https://img.shields.io/github/workflow/status/femvc/httpserver3/Node.js%20CI/master?style=flat-square)](https://github.com/femvc/httpserver3/actions)
+[![npm](https://img.shields.io/npm/v/httpserver3.svg?style=flat-square)](https://www.npmjs.com/package/httpserver3) [![homebrew](https://img.shields.io/homebrew/v/httpserver3?style=flat-square)](https://formulae.brew.sh/formula/httpserver3) [![npm downloads](https://img.shields.io/npm/dm/httpserver3?color=blue&label=npm%20downloads&style=flat-square)](https://www.npmjs.com/package/httpserver3)
+[![license](https://img.shields.io/github/license/femvc/httpserver3.svg?style=flat-square)](https://github.com/femvc/httpserver3)
 
-# http-server: a simple static HTTP server
+# httpserver3: a simple static HTTP server
 
-`http-server` is a simple, zero-configuration command-line static HTTP server.  It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development and learning.
+`httpserver3` is a simple, zero-configuration command-line static HTTP server.  It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development and learning.
 
-![Example of running http-server](https://github.com/http-party/http-server/raw/master/screenshots/public.png)
+![Example of running httpserver3](https://github.com/femvc/httpserver3/raw/master/screenshots/public.png)
 
 ## Installation:
 
@@ -14,25 +14,25 @@
 
 Using `npx` you can run the script without installing it first:
 
-    npx http-server [path] [options]
+    npx httpserver3 [path] [options]
 
 #### Globally via `npm`
 
-    npm install --global http-server
+    npm install --global httpserver3
 
-This will install `http-server` globally so that it may be run from the command line anywhere.
+This will install `httpserver3` globally so that it may be run from the command line anywhere.
 
 #### Globally via Homebrew
 
-    brew install http-server
+    brew install httpserver3
      
 #### As a dependency in your `npm` package:
 
-    npm install http-server
+    npm install httpserver3
 
 ## Usage:
 
-     http-server [path] [options]
+     httpserver3 [path] [options]
 
 `[path]` defaults to `./`
 
@@ -58,7 +58,7 @@ This will install `http-server` globally so that it may be run from the command 
 |`-U` or `--utc` |Use UTC time format in log messages.| |
 |`--log-ip` |Enable logging of the client's IP address |`false` |
 |`-P` or `--proxy` |Proxies all requests which can't be resolved locally to the given url. e.g.: -P http://someurl.com | |
-|`--proxy-options` |Pass proxy [options](https://github.com/http-party/node-http-proxy#options) using nested dotted objects. e.g.: --proxy-options.secure false |
+|`--proxy-options` |Pass proxy [options](https://github.com/femvc/node-http-proxy#options) using nested dotted objects. e.g.: --proxy-options.secure false |
 |`--username` |Username for basic authentication | |
 |`--password` |Password for basic authentication | |
 |`-S`, `--tls` or `--ssl` |Enable secure request serving with TLS/SSL (HTTPS)|`false`|
@@ -80,7 +80,7 @@ This will install `http-server` globally so that it may be run from the command 
 To implement a catch-all redirect, use the index page itself as the proxy with:
 
 ```
-http-server --proxy http://localhost:8080?
+httpserver3 --proxy http://localhost:8080?
 ```
 
 Note the `?` at the end of the proxy URL. Thanks to [@houston3](https://github.com/houston3) for this clever hack!
@@ -100,7 +100,7 @@ This generates a cert-key pair and it will be valid for 3650 days (about 10 year
 Then you need to run the server with `-S` for enabling SSL and `-C` for your certificate file.
 
 ``` sh
-http-server -S -C cert.pem
+httpserver3 -S -C cert.pem
 ```
 
 If you wish to use a passphrase with your private key you can include one in the openssl command via the -passout parameter (using password of foobar)
@@ -115,9 +115,9 @@ For security reasons, the passphrase will only be read from the `NODE_HTTP_SERVE
 This is what should be output if successful: 
 
 ``` sh
-Starting up http-server, serving ./ through https
+Starting up httpserver3, serving ./ through https
 
-http-server settings:
+httpserver3 settings:
 CORS: disabled
 Cache: 3600 seconds
 Connection Timeout: 120 seconds

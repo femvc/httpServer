@@ -5,7 +5,7 @@ about: Suggest an idea for this project
 
 #### What's the problem this feature will solve?
 
-<!-- What are you trying to do, that you are unable to achieve with http-server as it currently stands? -->
+<!-- What are you trying to do, that you are unable to achieve with httpserver3 as it currently stands? -->
 
 #### Describe the solution you'd like
 
@@ -15,7 +15,7 @@ about: Suggest an idea for this project
 
 #### Alternative Solutions
 
-<!-- Have you tried to workaround the problem using http-server or other tools? Or a different approach to solving this issue? Please elaborate here. -->
+<!-- Have you tried to workaround the problem using httpserver3 or other tools? Or a different approach to solving this issue? Please elaborate here. -->
 
 #### Additional context
 
