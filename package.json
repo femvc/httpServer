@@ -1,6 +1,6 @@
 {
   "name": "httpserver3",
-  "version": "14.2.1",
+  "version": "14.3.1",
   "description": "A simple zero-configuration command-line http server",
   "main": "./lib/httpserver3",
   "repository": {
