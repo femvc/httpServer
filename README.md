@@ -34,7 +34,7 @@ This will install `http-server` globally so that it may be run from the command 
 
      http-server [path] [options]
 
-`[path]` defaults to `./public` if the folder exists, and `./` otherwise.
+`[path]` defaults to `./`
 
 *Now you can visit http://localhost:8080 to view your server*
 
@@ -48,8 +48,8 @@ This will install `http-server` globally so that it may be run from the command 
 |`-a`   |Address to use |0.0.0.0|
 |`-d`     |Show directory listings |`true` |
 |`-i`   | Display autoIndex | `true` |
-|`-g` or `--gzip` |When enabled it will serve `./public/some-file.js.gz` in place of `./public/some-file.js` when a gzipped version of the file exists and the request accepts gzip encoding. If brotli is also enabled, it will try to serve brotli first.|`false`|
-|`-b` or `--brotli`|When enabled it will serve `./public/some-file.js.br` in place of `./public/some-file.js` when a brotli compressed version of the file exists and the request accepts `br` encoding. If gzip is also enabled, it will try to serve brotli first. |`false`|
+|`-g` or `--gzip` |When enabled it will serve `./some-file.js.gz` in place of `./some-file.js` when a gzipped version of the file exists and the request accepts gzip encoding. If brotli is also enabled, it will try to serve brotli first.|`false`|
+|`-b` or `--brotli`|When enabled it will serve `./some-file.js.br` in place of `./some-file.js` when a brotli compressed version of the file exists and the request accepts `br` encoding. If gzip is also enabled, it will try to serve brotli first. |`false`|
 |`-e` or `--ext`  |Default file extension if none supplied |`html` | 
 |`-s` or `--silent` |Suppress log messages from output  | |
 |`--cors` |Enable CORS via the `Access-Control-Allow-Origin` header  | |
@@ -146,4 +146,4 @@ $ npm start
 *Now you can visit http://localhost:8080 to view your server*
 
 You should see the turtle image in the screenshot above hosted at that URL. See
-the `./public` folder for demo content.
+the `./` folder for demo content.
