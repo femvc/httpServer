@@ -112,7 +112,7 @@ e.g.
 For security reasons, the passphrase will only be read from the `NODE_HTTP_SERVER_SSL_PASSPHRASE` environment variable.
 
 
-This is what should be output if successful:
+This is what should be output if successful: 
 
 ``` sh
 Starting up http-server, serving ./ through https
